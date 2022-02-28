@@ -2,7 +2,7 @@
 
 ## Project overview
 
-Analyzing Amazon reviews written by members of the paid Amazon Vine program, which is a service that allows manufacturers and publishers to receive reviews for their products, members that are enrolled in the program receive free products for publishing reviews. The main idea of the project is to use PySpark to perform an ETL process to extract the dataset, transform the data, connect to an AWS RDS instance, and load the transformed data into pgAdmin. Finally, use Pandas determine if there is any bias toward favorable reviews from Vine members in the dataset.
+
 
 ## Resources
 
@@ -26,7 +26,24 @@ Analyzing Amazon reviews written by members of the paid Amazon Vine program, whi
 
 ### Cluster Centroids Algorithm
 
-- 
+- The accuracy to predict credit risk is **54%**. For High Risk, with a precision score of **0.01**, recall and sensitivity of **0.69**, and F1 score of **0.01** the  model also labeled many Low Risk credits as High Risk. On the other hand, the model was also better at predicting Low Risk credits, with a precision score of **1.0**, recall and sensitivity of **0.40**, and F1 score of **0.57*.
 
 ![image](https://user-images.githubusercontent.com/91766276/156073091-b5363ae2-0671-4b77-9d0f-40fcc6700998.png)
 
+### SMOTEENN Algorithm
+
+- The accuracy to predict credit risk is **69%**. For High Risk, with a precision score of **0.01**, recall and sensitivity of **0.80**, and F1 score of **0.02** the  model also labeled many Low Risk credits as High Risk. On the other hand, the model was also better at predicting Low Risk credits, with a precision score of **1.0**, recall and sensitivity of **0.57**, and F1 score of **0.73*.
+
+![image](https://user-images.githubusercontent.com/91766276/156074422-7ad00ea5-c4d3-4b08-b2bf-2b659ecd5844.png)
+
+### Balanced Random Forest Classifier Algorithm
+
+- The accuracy to predict credit risk is **79%**. For High Risk, with a precision score of **0.03**, recall and sensitivity of **0.70**, and F1 score of **0.06** the  model also labeled many Low Risk credits as High Risk. On the other hand, the model was also better at predicting Low Risk credits, with a precision score of **1.0**, recall and sensitivity of **0.87**, and F1 score of **0.93*.
+
+![image](https://user-images.githubusercontent.com/91766276/156075295-bc0fbe97-c83a-4c84-9ffa-82f0178e835f.png)
+
+### Easy Ensemble AdaBoost Classifier Algorithm
+
+- The accuracy to predict credit risk is **93%**. For High Risk, with a precision score of **0.09**, recall and sensitivity of **0.92**, and F1 score of **0.16** the  model also labeled many Low Risk credits as High Risk. On the other hand, the model was also better at predicting Low Risk credits, with a precision score of **1.0**, recall and sensitivity of **0.94**, and F1 score of **0.97*.
+
+![image](https://user-images.githubusercontent.com/91766276/156075808-c1080ee8-18d1-4ec3-8a0a-e662d38e201b.png)
