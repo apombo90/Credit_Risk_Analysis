@@ -47,3 +47,11 @@
 - The accuracy to predict credit risk is **93%**. For High Risk, with a precision score of **0.09**, recall and sensitivity of **0.92**, and F1 score of **0.16** the  model also labeled many Low Risk credits as High Risk. On the other hand, the model was also better at predicting Low Risk credits, with a precision score of **1.0**, recall and sensitivity of **0.94**, and F1 score of **0.97*.
 
 ![image](https://user-images.githubusercontent.com/91766276/156075808-c1080ee8-18d1-4ec3-8a0a-e662d38e201b.png)
+
+## Summary
+
+All models are not the best to predict High Risk credits beacuse precision for all models was less than **0.04**. This means that all models labeled many Low Risk credits as High Risk. Whereas for Low Risk credits, all models are better at not predicting actual High Risk credits as Low Risk.
+
+Analizing the `Naive Random Oversampling Algorithm`, this model is not be the best one for predicting credit risk because the model's accuracy, **66%**, is low, and the precision and recall are not good enough to state that the model will be good at classifying credit risk. The same hapens with the `SMOTE Algorithm`, one difference is that this model has a higher ability of the classifier to find all the low risk credits. Looking at the `Cluster Centroids Algorithm`, this model is the worst one for this scenario. The model's accuracy is only **54%** and it has the highest number of low risk credits predicted as high risk. The `SMOTEENN Algorithm`, is not the best one for predicting credit risk either, becasue its accuracy is **69%** and the recall for low risk credits is only **0.57** meaning that the model was not successful at finding low risk credits.
+
+On the other hand, `Balanced Random Forest Classifier Algorithm` is better than the previosly mentioned models. Its accuracy is **79%** and the recall is higher than the previous models. However, `Easy Ensemble AdaBoost Classifier Algorithm` is the model with the highest accuracy **(93%)**, Low Risk and High Risk recall and sensitivity is higher than **0.90**.
